@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Contact Arpad</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            body {
+                display: table;
+            }
+
+            .my-block {
+                font-family: Brush Script MT, Brush Script Std, cursive;
+                color: white;
+                font-size: 10vw;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            body {
+              /* Source: https://uigradients.com */
+              background: #3a7bd5;
+              background: linear-gradient(to top, #3a6073, #3a7bd5);
+            }
+            .box {
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+            }
+            .box-input {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 10px;
+                gap: 10px;
+                margin: 10px;
+                padding: 10px;
+                width: 20%;
+                height: fit-content;
+            }
+            .box-instructions {
+                display: grid;
+                text-align: left;
+                border-radius: 10px;
+                margin: 5px;
+                padding: 10px;
+                width: 60%;
+                height: fit-content;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+                font-size: 1em;
+                color: white;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .button {
+                background-color: #0095ff;
+                border: 1px solid transparent;
+                border-radius: 3px;
+                box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+                box-sizing: border-box;
+                color: #fff;
+                cursor: pointer;
+                display: inline-block;
+                font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 1.15385;
+                margin: 0;
+                outline: none;
+                padding: 8px .8em;
+                position: relative;
+                text-align: center;
+                text-decoration: none;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                vertical-align: baseline;
+                white-space: nowrap;
+            }
+            .button:hover,
+            .button:focus {
+            background-color: #07c;
+            }
+            .button:focus {
+            box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+            }
+            .button:active {
+            background-color: #0064bd;
+            box-shadow: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='box'>
+            <div class='box-instructions'>
+                Please provide your name and email address
+            </div>
+            <div class='box-input'>
+                <form action="/thanks" method="POST">
+                    <label for="firstName">First Name:</label>
+                    <input id="firstName" name="firstName" type="text">
+                    <br /><br />
+                    <label for="lastName">Last Name:</label>
+                    <input id="lastName" name="lastName" type="text">
+                    <br /><br />
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="text">
+                    <br /><br />
+                    <input class='button' type="submit"/>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
