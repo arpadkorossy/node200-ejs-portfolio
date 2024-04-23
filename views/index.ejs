@@ -1,6 +1,7 @@
 <html>
+    <title> Arpad's Portfolio </title>
     <head>
-        <title> Arpad's Portfolio </title>
+        <meta charset="utf-8">
         <style>
             html, body {
                 height: 100%;
@@ -8,9 +9,22 @@
                 padding: 0;
                 width: 100%;
             }
-            .my-block {
-                font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+            .page {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .box {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .title-block {
+                font-family: 'Space Mono', monospace;
                 color: white;
+                width: 100%;
+                margin-top: 15px;
+                margin-bottom: 0px;
                 font-size: 4vw;
                 text-align: center;
                 display: table-cell;
@@ -20,7 +34,7 @@
                 display: table;
                 /* Source: https://uigradients.com */
                 background: #3a7bd5;
-                background: linear-gradient(to top, #3a6073, #3a7bd5);
+                background: linear-gradient(to right, #3a6073, #3a7bd5);
             }
             .button {
                 background-color: #0095ff;
@@ -49,21 +63,151 @@
             }
             .button:hover,
             .button:focus {
-            background-color: #07c;
+                background-color: #07c;
             }
             .button:focus {
-            box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+                box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
             }
             .button:active {
-            background-color: #0064bd;
-            box-shadow: none;
+                background-color: #0064bd;
+                box-shadow: none;
+            }
+            .list-block {
+                font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+                color: white;
+                font-size: 4vw;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .list { 
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 10px;
+                gap: 10px;
+                width: 40%;
+                height: fit-content;
+                font-family: 'Space Mono', monospace;
+                background-color: white;
+                font-size: 4vw;
+                text-align: left;
+                display: table-cell;
+                vertical-align: middle; 
+                display: flex;
+                flex-direction: column;
+                max-width: 600px;
+                padding-left: 32px;
+                padding-right: 32px;
+                margin: 60px auto;
+                border: 1px solid #eee;
+                box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+            }
+
+            * { 
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-rendering: optimizelegibility;
+                letter-spacing: -0.25px;
+            }
+
+            ol { padding-left: 30px; }
+            li { 
+                color: #4F4F4F; 
+                padding-left: 16px;
+                margin-top: 12px;
+                position: relative;
+                font-size: 16px;
+                line-height: 20px;
+            
+                &:before {
+                    content: '';
+                    display: block;
+                    height: 42px;
+                    width: 42px;
+                    border-radius: 50%;
+                    border: 2px solid #ddd;
+                    position: absolute; 
+                    top: -12px;
+                    left: -46px;
+                }
+            }
+
+            strong { color: #292929; }
+
+            ol.alternating-colors { 
+            li:nth-child(odd):before { border-color: #0BAD02; }
+            li:nth-child(even):before { border-color: #2378D5; }
             }
         </style>
     </head>
     <body>
-        <div class='my-block'>
-            Arpad's WebDev Portfolio
-            <br /><br /><a href='/contact'><button class="button" role="button">Contact</button></a>
+        <div class="page">
+            <div class="box">
+                <div class="title-block">Arpad's WebDev Portfolio</div>
+            </div>
+            <div class="box">
+                <div class='list'>
+                    <ol class="alternating-colors">
+                        <strong><div style="text-align:center;">WEB102</div></strong>
+                        <li>
+                            <strong><a href='https://github.com/arpadkorossy/web102-change-calculator'>Change Calculator</a></strong>
+                            <p>Basic HTML/CSS/JS change calculator</p>
+                        </li>
+                        <li>
+                            <strong><a href='https://github.com/arpadkorossy/web102-San-Diego-Top-Spots'>San Diego Top Spots</a></strong>
+                            <p>Format and display JSON data</p>
+                        </li>
+                    </ol>
+                    <ol class="alternating-colors">
+                        <strong><div style="text-align:center;">NODE101</div></strong>
+                        <li>
+                            <strong><a href="https://github.com/arpadkorossy/node101-express-server">Express Server</a></strong>
+                            <p>Basic HTTP server using Express.js</p>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/arpadkorossy/node101-movie-finder-data">Movie Finder API Proxy</a></strong>
+                            <p>Implement caching and rate limits on an API proxy backend</p>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/arpadkorossy/node101-log-all-the-things">Log All the Things</a></strong>
+                            <p>Implement CSV logging for an Express server</p>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/arpadkorossy/node101-vstda-api">VSTDA API</a></strong>
+                            <p>Build an API to interact with a VSTDA</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class='list'>
+                    <ol class="alternating-colors">
+                        <strong><div style="text-align:center;">REACT100</div></strong>
+                        <li>
+                            <strong><a href="https://github.com/arpadkorossy/react100-mortgage-calculator">Mortgage Calculator</a></strong>
+                            <p>Upgraded mortgage calculator using React</p>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/arpadkorossy/react-change-calculator">Change Calculator</a></strong>
+                            <p>Upgraded change calculator using React</p>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/arpadkorossy/react-top-spots">Top Spots</a></strong>
+                            <p>Upgraded San Diego top spots app using React</p>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/arpadkorossy/react-vstda">VSTDA</a></strong>
+                            <p>Very Simple TODO-list App utilizing ReactJS</p>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/arpadkorossy/react-hackathon">API Hackathon</a></strong>
+                            <p>Combines Edamam and TheMealDB APIs to find recipes and provide nutrition information</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box"><a href='/contact'><button class="button" role="button">
+                Contact</button>
+            </div>
         </div>
     </body>
 </html>
